@@ -16,7 +16,7 @@ import java.util.List;
  * This configuration redefines the method eval() using utility in {@link GameAshtonTablut}.
  *
  * @see aima.core.search.adversarial.IterativeDeepeningAlphaBetaSearch
- * @author Giuseppe Murro
+ * 
  */
 
 public class MyIterative extends IterativeDeepeningAlphaBetaSearch<State, Action, State.Turn>{
