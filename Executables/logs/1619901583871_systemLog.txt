@@ -1,0 +1,28 @@
+May 01, 2021 10:39:43 PM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Accensione server
+May 01, 2021 10:39:43 PM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Partita di Tablut
+May 01, 2021 10:39:43 PM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Waiting for white connection..
+May 01, 2021 10:39:48 PM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: White player connected
+May 01, 2021 10:39:48 PM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Lettura nome player bianco in corso..
+May 01, 2021 10:39:49 PM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: White player name:	tulbat
+May 01, 2021 10:39:49 PM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Waiting for Black connection..
+May 01, 2021 10:39:49 PM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Accettata connessione con client giocatore Nero
+May 01, 2021 10:39:49 PM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Lettura nome player nero in corso..
+May 01, 2021 10:39:49 PM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Black player name:	tulbat
+May 01, 2021 10:39:49 PM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Invio messaggio ai giocatori
+May 01, 2021 10:39:49 PM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Lettura mossa player W in corso..
+May 01, 2021 10:39:51 PM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Move received.	Turn: W Pawn from null to null
+May 01, 2021 10:39:51 PM it.unibo.ai.didattica.competition.tablut.server.Server run
+WARNING: Chiusura sistema per troppi errori giocatore bianco
