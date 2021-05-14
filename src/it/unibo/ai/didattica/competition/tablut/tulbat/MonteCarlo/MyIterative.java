@@ -11,7 +11,7 @@ import java.util.List;
 
 
 /**
- * Custom implementation of AIMA iterative deepening Minimax search with alpha-beta pruning
+ * This is the custom implementation of AIMA iterative deepening Minimax search with alpha-beta pruning
  * with action ordering. Maximal computation time is specified in seconds.
  * This configuration redefines the method eval() using utility in {@link GameAshtonTablut}.
  *
