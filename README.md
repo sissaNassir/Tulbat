@@ -1,2 +1,6 @@
 # Tulbat
-Implementation of Tablut Game made by the Tulbat's team
+Implementation of the Tablut Game made by the Tulbat's team
+
+AI Challenge 2020/2021
+
+
