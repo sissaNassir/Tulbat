@@ -1,0 +1,40 @@
+May 15, 2021 9:33:46 AM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Accensione server
+May 15, 2021 9:33:46 AM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Partita di Tablut
+May 15, 2021 9:33:46 AM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Waiting for white connection..
+May 15, 2021 9:33:52 AM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: White player connected
+May 15, 2021 9:33:52 AM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Lettura nome player bianco in corso..
+May 15, 2021 9:33:53 AM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: White player name:	tulbat
+May 15, 2021 9:33:53 AM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Waiting for Black connection..
+May 15, 2021 9:33:56 AM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Accettata connessione con client giocatore Nero
+May 15, 2021 9:33:56 AM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Lettura nome player nero in corso..
+May 15, 2021 9:33:56 AM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Black player name:	tulbat
+May 15, 2021 9:33:56 AM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Invio messaggio ai giocatori
+May 15, 2021 9:33:56 AM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Lettura mossa player W in corso..
+May 15, 2021 9:34:55 AM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Move received.	Turn: W Pawn from e3 to d3
+May 15, 2021 9:34:55 AM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Invio messaggio ai client
+May 15, 2021 9:34:55 AM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Lettura mossa player B in corso..
+May 15, 2021 9:35:54 AM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Move received.	Turn: B Pawn from a4 to d4
+May 15, 2021 9:35:54 AM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Invio messaggio ai client
+May 15, 2021 9:35:54 AM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Lettura mossa player W in corso..
+May 15, 2021 9:36:01 AM it.unibo.ai.didattica.competition.tablut.server.Server run
+FINE: Move received.	Turn: W Pawn from null to null
+May 15, 2021 9:36:01 AM it.unibo.ai.didattica.competition.tablut.server.Server run
+WARNING: Chiusura sistema per troppi errori giocatore bianco
