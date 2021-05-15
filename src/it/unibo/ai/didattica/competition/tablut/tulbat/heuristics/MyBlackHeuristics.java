@@ -34,10 +34,10 @@ public class MyBlackHeuristics extends MyHeuristics {
         super(state);
         //Initializing weights
         weights = new HashMap<String, Double>();
-        weights.put(BLACK_ALIVE, 45.0);
-        weights.put(WHITE_EATEN, 50.0);
-        weights.put(BLACK_SURROUND_KING, 30.0);
-        weights.put(RHOMBUS_POSITIONS, 2.0);
+        weights.put(BLACK_ALIVE, 40.0);
+        weights.put(WHITE_EATEN, 55.0);
+        weights.put(BLACK_SURROUND_KING, 18.0);
+        weights.put(RHOMBUS_POSITIONS, 2.5);
 
         //Extraction of keys
         keys = new String[weights.size()];
