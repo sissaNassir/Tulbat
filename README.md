@@ -70,7 +70,8 @@ We use Git for versioning.
 
  The name of group enrolled in the Tablut Students Challenge 2020/2021 that presented this project is **Tulbat**.
  Components of the team are:\\
- Silvia Zandoli: `silvia.zandoli2@studio.unibo.it`, [_silviazandoli_](https://github.com/silviazandoli).\\
+ Silvia Zandoli: `silvia.zandoli2@studio.unibo.it`, [_silviazandoli_](https://github.com/silviazandoli).
+ 
  Federico Cremonini: .
  Silvio Russo: .
 
