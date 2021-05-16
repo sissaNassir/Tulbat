@@ -73,9 +73,9 @@ We use Git for versioning.
  
  Silvia Zandoli: `silvia.zandoli2@studio.unibo.it`, [_silviazandoli_](https://github.com/silviazandoli).
  
- Federico Cremonini:  `federico.cremonini2@studio.unibo.it`, 
+ Federico Cremonini:  `federico.cremonini2@studio.unibo.it`, [_FedericoCremoniniUnibo_](https://github.com/FedericoCremoniniUnibo).
  
- Silvio Russo:  `silvio.russo2@studio.unibo.it` , [_Silvio9889_](https://github.com/Silvio9889)
+ Silvio Russo:  `silvio.russo2@studio.unibo.it` , [_Silvio9889_](https://github.com/Silvio9889).
 
 
 
