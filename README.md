@@ -32,10 +32,10 @@ cd Tulbat
 
 ## Requirements
 
-You need to have JDK >= 11. From Ubuntu/Debian console, you can install it with these commands:
+You need to have JDK >= 16. From Ubuntu console, you can install it with these commands:
 ```console
 sudo apt update
-sudo apt install openjdk-11-jdk -y
+sudo apt install openjdk-16-jdk -y
 ```
 
 ## Run
@@ -46,15 +46,15 @@ java -jar Server.jar
 ```
 Then you will run either black and white artificial intelligent player:
 ```console
-./runmyplayer.sh black 60 localhost
+./runmyplayer black 60 localhost
 ```
 ```console
-./runmyplayer.sh white 60 localhost
+./runmyplayer white 60 localhost
 ```
 
 You can run players also with different parameters:
 ```console
-./runmyplayer.sh <role> <timeout-in-seconds> <server-ip>
+./runmyplayer <role> <timeout-in-seconds> <server-ip>
     
     <role> : role of the player in the game (black or white, it is mandatory)
     <timeout-in-seconds> : time taken by the player to find the best moves (default: 60, not mandatory)
