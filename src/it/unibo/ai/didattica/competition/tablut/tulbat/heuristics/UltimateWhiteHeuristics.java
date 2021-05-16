@@ -81,12 +81,12 @@ public class UltimateWhiteHeuristics extends MyHeuristics {
         double numberOfBlackEaten = (double) (GameAshtonTablut.NUM_BLACK - super.blackPieces)
                 / GameAshtonTablut.NUM_BLACK;
         double blackSurroundKing = (double) (getNumEatenPositions()
-                - super.blackAroundKing/*checkNearPawns(state, kingPosition(state), State.Turn.BLACK.toString())*/)
+                - super.blackAroundKing)
                 / getNumEatenPositions();
         double protectionKing = protectionKing();
 
-        int numberWinWays = super.winWays;//countWinWays(state);
-        double numberOfWinEscapesKing = numberWinWays > 1 ? (double) super.winWays/*countWinWays(state)*/ / 4 : 0.0;
+        int numberWinWays = super.winWays;
+        double numberOfWinEscapesKing = numberWinWays > 1 ? (double) super.winWays / 4 : 0.0;
 
         if(flag){
             //white stamp
@@ -126,8 +126,6 @@ public class UltimateWhiteHeuristics extends MyHeuristics {
         int[] kingPos = kingPosition;
         // Pawns near to the king
         ArrayList<int[]> pawnsPositions=super.blackPositions;
-		/*ArrayList<int[]> pawnsPositions = (ArrayList<int[]>) positionNearPawns(state, kingPos,
-				State.Pawn.BLACK.toString());*/
 
 
         // There is a black pawn that threatens the king and 2 pawns are enough to eat
@@ -197,7 +195,6 @@ public class UltimateWhiteHeuristics extends MyHeuristics {
                 }
 
                 result += contributionPerN * checkNearPawns(state, targetPosition, State.Pawn.WHITE.toString());
-                //result += contributionPerN* super.whiteAroundKing;
             }
 
         }

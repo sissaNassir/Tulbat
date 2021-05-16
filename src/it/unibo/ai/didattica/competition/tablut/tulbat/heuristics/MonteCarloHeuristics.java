@@ -168,8 +168,7 @@ public abstract class MonteCarloHeuristics {
 						}
 					}
 					/*
-					 * era il vecchio metodo public boolean safePositionKing(State state,int[]
-					 * kingPosition){ Mi serve per le vie di fuga, per capire se il re si trova
+					 * Mi serve per le vie di fuga, per capire se il re si trova
 					 * in una posizione sicura
 					 */
 					if (i > 2 && i < 6) {

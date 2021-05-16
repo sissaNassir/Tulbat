@@ -90,20 +90,6 @@ public class WhiteHeuristics extends MyHeuristics {
    }
    
    /**
-   * positionNearPawns non � pi� implementato perch� sarebbero le variabili super.whitePositions
-   * and super.blackPositions e gli interessa posso le posizioni intorno al re
-   * @return the positions occupied near the pawn
-   */
-   
-  
-  /**
-  *metodo checkNearPawns
-  * @return the number of near pawns that are target(BLACK or WHITE)
-   nell'euristica nuova mi ritorna gi�
-  il numero di pedine bianche intorno al re. 
-   verrebbe richiamato quindi in evaluateState dove ora diventa
-  super.blackAroundKing(riga 142)*/
-   /**
    *
    * @return the number of near pawns that are target(BLACK or WHITE)
    */
@@ -121,9 +107,6 @@ public class WhiteHeuristics extends MyHeuristics {
           count++;
       return count;
   }
-   
-   /*anche il metodo countWinWays � reimplementato nell'euristica nuova e non � pi�
-    * richiamato il metodo vecchio*/
 
 	/**
 	 *
@@ -139,12 +122,12 @@ public class WhiteHeuristics extends MyHeuristics {
 		double numberOfBlackEaten = (double) (GameAshtonTablut.NUM_BLACK - super.blackPieces)
 				/ GameAshtonTablut.NUM_BLACK;
 		double blackSurroundKing = (double) (getNumEatenPositions(state)
-				- super.blackAroundKing/*checkNearPawns(state, kingPosition(state), State.Turn.BLACK.toString())*/)
+				- super.blackAroundKing)
 				/ getNumEatenPositions(state);
 		double protectionKing = protectionKing();
 
-		int numberWinWays = super.winWays;//countWinWays(state);
-		double numberOfWinEscapesKing = numberWinWays > 1 ? (double) super.winWays/*countWinWays(state)*/ / 4 : 0.0;
+		int numberWinWays = super.winWays;
+		double numberOfWinEscapesKing = numberWinWays > 1 ? (double) super.winWays / 4 : 0.0;
 
 		if (flag) {
 			System.out.println("Number of white alive: " + numberOfWhiteAlive);
@@ -209,8 +192,6 @@ public class WhiteHeuristics extends MyHeuristics {
 		int[] kingPos = kingPosition(state);
 		// Pawns near to the king
 		ArrayList<int[]> pawnsPositions=super.blackPositions;
-		/*ArrayList<int[]> pawnsPositions = (ArrayList<int[]>) positionNearPawns(state, kingPos,
-				State.Pawn.BLACK.toString());*/
 		
 
 		// There is a black pawn that threatens the king and 2 pawns are enough to eat
@@ -280,7 +261,6 @@ public class WhiteHeuristics extends MyHeuristics {
 				}
 
 				result += contributionPerN * checkNearPawns(state, targetPosition, State.Pawn.WHITE.toString());
-				//result += contributionPerN* super.whiteAroundKing;
 			}
 
 		}
