@@ -25,13 +25,7 @@ public class BlackHeuristicsMonteCarlo extends MonteCarloHeuristics {
     private boolean flag = false;
 
     //Matrix of favourite black positions in initial stages and to block the escape ways
-    private final int[][] rhombus = {
-            {1,2},       {1,6},
-            {2,1},                   {2,7},
-
-            {6,1},                   {6,7},
-            {7,2},       {7,6}
-    };
+    private final int[][] rhombus = {{1,2},{1,6},{2,1},{2,7},{6,1},{6,7},{7,2},{7,6}};
 
     private double numberOfBlack;
     private double numberOfWhiteEaten;
@@ -41,10 +35,10 @@ public class BlackHeuristicsMonteCarlo extends MonteCarloHeuristics {
         super(state);
         //Initializing weights
         weights = new HashMap<String, Double>();
-        weights.put(BLACK_ALIVE, 35.0);
-        weights.put(WHITE_EATEN, 48.0);
-        weights.put(BLACK_SURROUND_KING, 15.0);
-        weights.put(RHOMBUS_POSITIONS, 2.0);
+        weights.put(BLACK_ALIVE, 40.0);
+        weights.put(WHITE_EATEN, 55.0);
+        weights.put(BLACK_SURROUND_KING, 18.0);
+        weights.put(RHOMBUS_POSITIONS, 2.5);
 
         //Extraction of keys
         keys = new String[weights.size()];

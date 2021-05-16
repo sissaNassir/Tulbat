@@ -33,17 +33,7 @@ public class MyWhiteHeuristics extends MyHeuristics {
 		// TODO Auto-generated constructor stub
 		weights = new HashMap<String, Double>();
 		// Positions which are the best moves at the beginning of the game
-		/*
-		weights.put(BEST_POSITIONS, 2.0); //piccolissimo, come discriminante a pari valore
-		weights.put(BLACK_EATEN, 20.0);//circa met� del bianco
-		weights.put(WHITE_ALIVE, 35.0);//circa doppio nero
-		weights.put(NUM_ESCAPES_KING, 12.0);//poco meno valore nero
-		weights.put(KING_PROTECTION, 35.0);//poco meno valore bianco
 
-		// Extraction of keys
-		keys = new String[weights.size()];
-		keys = weights.keySet().toArray(new String[0]);
-		*/
 		weights.put(BEST_POSITIONS, 2.0); //piccolissimo, come discriminante a pari valore
 		weights.put(BLACK_EATEN, 20.0);//circa metà del bianco
 		weights.put(WHITE_ALIVE, 35.0);//circa doppio nero

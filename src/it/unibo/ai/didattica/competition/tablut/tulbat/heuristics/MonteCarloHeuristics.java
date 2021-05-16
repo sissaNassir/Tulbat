@@ -167,7 +167,11 @@ public abstract class MonteCarloHeuristics {
 							blackPositions.add(pos);
 						}
 					}
-
+					/*
+					 * era il vecchio metodo public boolean safePositionKing(State state,int[]
+					 * kingPosition){ Mi serve per le vie di fuga, per capire se il re si trova
+					 * in una posizione sicura
+					 */
 					if (i > 2 && i < 6) {
 						if (j > 2 && j < 6) {
 							safePositionKing = true;
@@ -175,7 +179,7 @@ public abstract class MonteCarloHeuristics {
 					} else {
 						safePositionKing = false;
 					}
-					//calulate win ways
+					// era il vecchio metodo countWinWays-> calcolo vie di fuga (winWays)
 					if (!safePositionKing) {
 						if ((!(j > 2 && j < 6)) && (!(i > 2 && i < 6))) {
 							// not safe row not safe col

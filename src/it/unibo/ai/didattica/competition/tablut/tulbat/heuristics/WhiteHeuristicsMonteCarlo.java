@@ -7,10 +7,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 /***
  * Heuristic for the white pawn
- * 
  * @author silvia zandoli
  *
  */
@@ -57,13 +55,10 @@ public class WhiteHeuristicsMonteCarlo extends MonteCarloHeuristics {
 		keys = weights.keySet().toArray(new String[0]);
 
 	}
-
-	/**
-	 * memorize the position of the king
-	 * 
+	
+	/**memorize the position of the king
 	 * @param state
-	 * @return ad array with the position of the king
-	 */
+	 * @return ad array with the position of the king*/
 	public int[] kingPosition(State state) {
 		// where I saved the int position of the king
 		int[] king = new int[2];
@@ -74,46 +69,62 @@ public class WhiteHeuristicsMonteCarlo extends MonteCarloHeuristics {
 		return king;
 
 	}
+	
+	  /**
+    *
+    * @param state
+    * @return number of positions needed to eat king in the current state
+    */
+   public int getNumEatenPositions(State state){
 
-	/**
-	 *
-	 * @param state
-	 * @return number of positions needed to eat king in the current state
-	 */
-	public int getNumEatenPositions(State state) {
+       int[] kingPosition = kingPosition(state);
 
-		int[] kingPosition = kingPosition(state);
+       if (kingPosition[0] == 4 && kingPosition[1] == 4){
+           return 4;
+       } else if ((kingPosition[0] == 3 && kingPosition[1] == 4) || (kingPosition[0] == 4 && kingPosition[1] == 3)
+                  || (kingPosition[0] == 5 && kingPosition[1] == 4) || (kingPosition[0] == 4 && kingPosition[1] == 5)){
+           return 3;
+       } else{
+           return 2;
+       }
 
-		if (kingPosition[0] == 4 && kingPosition[1] == 4) {
-			return 4;
-		} else if ((kingPosition[0] == 3 && kingPosition[1] == 4) || (kingPosition[0] == 4 && kingPosition[1] == 3)
-				|| (kingPosition[0] == 5 && kingPosition[1] == 4) || (kingPosition[0] == 4 && kingPosition[1] == 5)) {
-			return 3;
-		} else {
-			return 2;
-		}
-
-	}
-
-	/**
-	 *
-	 * @return the number of near pawns that are target(BLACK or WHITE)
-	 */
-	public int checkNearPawns(State state, int[] position, String target) {
-		int count = 0;
-		// GET TURN
-		State.Pawn[][] board = state.getBoard();
-		if (board[position[0] - 1][position[1]].equalsPawn(target))
-			count++;
-		if (board[position[0] + 1][position[1]].equalsPawn(target))
-			count++;
-		if (board[position[0]][position[1] - 1].equalsPawn(target))
-			count++;
-		if (board[position[0]][position[1] + 1].equalsPawn(target))
-			count++;
-		return count;
-	}
-
+   }
+   
+   /**
+   * positionNearPawns non � pi� implementato perch� sarebbero le variabili super.whitePositions
+   * and super.blackPositions e gli interessa posso le posizioni intorno al re
+   * @return the positions occupied near the pawn
+   */
+   
+  
+  /**
+  *metodo checkNearPawns
+  * @return the number of near pawns that are target(BLACK or WHITE)
+   nell'euristica nuova mi ritorna gi�
+  il numero di pedine bianche intorno al re. 
+   verrebbe richiamato quindi in evaluateState dove ora diventa
+  super.blackAroundKing(riga 142)*/
+   /**
+   *
+   * @return the number of near pawns that are target(BLACK or WHITE)
+   */
+  public int checkNearPawns(State state, int[] position, String target){
+      int count=0;
+      //GET TURN
+      State.Pawn[][] board = state.getBoard();
+      if(board[position[0]-1][position[1]].equalsPawn(target))
+          count++;
+      if(board[position[0]+1][position[1]].equalsPawn(target))
+          count++;
+      if(board[position[0]][position[1]-1].equalsPawn(target))
+          count++;
+      if(board[position[0]][position[1]+1].equalsPawn(target))
+          count++;
+      return count;
+  }
+   
+   /*anche il metodo countWinWays � reimplementato nell'euristica nuova e non � pi�
+    * richiamato il metodo vecchio*/
 
 	/**
 	 *
@@ -129,12 +140,12 @@ public class WhiteHeuristicsMonteCarlo extends MonteCarloHeuristics {
 		double numberOfBlackEaten = (double) (GameAshtonTablut.NUM_BLACK - super.blackPieces)
 				/ GameAshtonTablut.NUM_BLACK;
 		double blackSurroundKing = (double) (getNumEatenPositions(state)
-				- super.blackAroundKing)
+				- super.blackAroundKing/*checkNearPawns(state, kingPosition(state), State.Turn.BLACK.toString())*/)
 				/ getNumEatenPositions(state);
 		double protectionKing = protectionKing();
 
-		int numberWinWays = super.winWays;
-		double numberOfWinEscapesKing = numberWinWays > 1 ? (double) super.winWays / 4 : 0.0;
+		int numberWinWays = super.winWays;//countWinWays(state);
+		double numberOfWinEscapesKing = numberWinWays > 1 ? (double) super.winWays/*countWinWays(state)*/ / 4 : 0.0;
 
 		if (flag) {
 			System.out.println("Number of white alive: " + numberOfWhiteAlive);
@@ -181,6 +192,8 @@ public class WhiteHeuristicsMonteCarlo extends MonteCarloHeuristics {
 		return num;
 	}
 
+	
+
 	/***
 	 *
 	 * @return value according to the protection level of the king whether an enemy
@@ -196,8 +209,10 @@ public class WhiteHeuristicsMonteCarlo extends MonteCarloHeuristics {
 
 		int[] kingPos = kingPosition(state);
 		// Pawns near to the king
-		ArrayList<int[]> pawnsPositions = super.blackPositions;
-
+		ArrayList<int[]> pawnsPositions=super.blackPositions;
+		/*ArrayList<int[]> pawnsPositions = (ArrayList<int[]>) positionNearPawns(state, kingPos,
+				State.Pawn.BLACK.toString());*/
+		
 
 		// There is a black pawn that threatens the king and 2 pawns are enough to eat
 		// the king
@@ -266,7 +281,7 @@ public class WhiteHeuristicsMonteCarlo extends MonteCarloHeuristics {
 				}
 
 				result += contributionPerN * checkNearPawns(state, targetPosition, State.Pawn.WHITE.toString());
-
+				//result += contributionPerN* super.whiteAroundKing;
 			}
 
 		}

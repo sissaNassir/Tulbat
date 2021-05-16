@@ -20,9 +20,6 @@ import it.unibo.ai.didattica.competition.tablut.exceptions.*;
 /**
  * 
  * Game engine inspired by the Ashton Rules of Tablut
- * 
- * 
- * @author A. Piretti, Andrea Galassi, Giuseppe Murro
  *
  */
 public class GameAshtonTablut implements Game, Cloneable, aima.core.search.adversarial.Game<State, Action, State.Turn> {
