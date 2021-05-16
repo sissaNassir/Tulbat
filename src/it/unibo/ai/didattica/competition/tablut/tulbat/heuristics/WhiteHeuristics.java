@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 /***
  * Heuristic for the white pawn
- * @author silvia zandoli
+ * 
  *
  */
 public class WhiteHeuristics extends MyHeuristics {

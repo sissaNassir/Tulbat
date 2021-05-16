@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 /***
  * Heuristic for the white pawn
- * @author silvia zandoli
+ * 
  *
  */
 public class WhiteHeuristicsMonteCarlo extends MonteCarloHeuristics {
