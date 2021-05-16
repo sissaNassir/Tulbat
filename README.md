@@ -5,7 +5,7 @@ Author: The Tulbat's team
 
 # Tablut Challenge 2020/2021
 
-<img align="right" width="280" height="280" src="src/it/unibo/ai/didattica/competition/tablut/gui/resources/screen.png">
+<img align="right" width="280" height="280" src="Cattura.PNG">
 
 **_Tablut_** is an ancient viking board game.
 The game board is grid of 9x9 squares where two players alternate in moving their pawns:
