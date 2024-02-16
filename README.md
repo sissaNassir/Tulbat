@@ -26,7 +26,7 @@ Simple heuristics described in these [brief slides](Tulbat.pdf) guarantee a deep
 First of all, you need to download the project through cloning.
 
 ```console
-git clone https://github.com/silviazandoli/Tulbat.git
+git clone https://github.com/sissaNassir/Tulbat.git
 cd Tulbat
 ```
 
@@ -69,13 +69,6 @@ We use Git for versioning.
 ## Group members
 
  The name of group enrolled in the Tablut Students Challenge 2020/2021 that presented this project is **Tulbat**.
- Components of the team are:
- 
- Silvia Zandoli: `silvia.zandoli2@studio.unibo.it`, [_silviazandoli_](https://github.com/silviazandoli).
- 
- Federico Cremonini:  `federico.cremonini2@studio.unibo.it`, [_FedericoCremoniniUnibo_](https://github.com/FedericoCremoniniUnibo).
- 
- Silvio Russo:  `silvio.russo2@studio.unibo.it` , [_Silvio9889_](https://github.com/Silvio9889).
 
 
 
