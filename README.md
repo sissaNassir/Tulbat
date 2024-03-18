@@ -1,5 +1,5 @@
 # Tablut
-For the Tablut competition 2020/2021
+For the Tablut competition 2020/2021, "Fondamenti di Intelligenza Artificiale" course, Bologna
 
 Author: The Tulbat's team
 
